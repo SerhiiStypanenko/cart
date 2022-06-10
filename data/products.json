@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Burger",
+    "something": "just some text",
+    "source": "https://avatanplus.com/files/resources/original/574efb329fae71550c853dde.png",
+    "description": "Burger description",
+    "price": 10,
+    "favourite": false
+    
+  },
+  {
+    "id": 2,
+    "title": "Hot-dog",
+    "source": "https://toppng.com/uploads/preview/hot-dog-png-11538680803cpyeyfjqhf.png",
+    "description": "Hot-dog description",
+    "price": 8,
+    "favourite": false
+  }
+]

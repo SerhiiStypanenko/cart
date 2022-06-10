@@ -1,0 +1,20 @@
+<h1 class="row_child">{{title}}</h1>
+
+{{# each products }}
+  <div class="row">
+    <div class="row_child">
+      <div class="row_child">
+        <div class="row_child">
+          <h3>{{ this.title }}</h3>
+            <p class="description">{{{this.description}}}</p>
+            <p class="something">{{{this.something}}}</p>
+            <img src={{this.source}} alt="piooop" width="250px", height="250px"/> 
+            <div><i aria-hidden="true"></i>Price: {{ this.price }} $</div>
+            <a href="/add/{{ this.id }}/{{ this.favourite }}" role="button"><i aria-hidden="true"></i> Add to favourites</a>
+            <a href="/add/{{ this.id }}" role="button"><i aria-hidden="true"></i><br>Add to cart</br> </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}

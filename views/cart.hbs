@@ -1,0 +1,39 @@
+<h1 class="cart_item">{{title}}</h1>
+{{# if products }}
+    <div class="cart_page">
+        <ul class="list-group">
+            {{# each products }}
+            <li class="cart_item_list">
+                <div class="cart_item">
+                    <strong>{{ this.item.title }}<img src={{this.item.source}} alt="piooop" width="100px", height="100px" /></strong><br/>
+                    
+                    <em>Description:{{{this.item.description}}}</em>
+                     
+                </div>
+                
+                <div class="cart_item">
+                    <a href="/decrease/{{this.item.id}}" type="button" class="cart_button">-</a>
+                    <span class="badge">Quantity:{{ this.quantity }}</span>
+                    <a href="/increase/{{this.item.id}}" type="button" class="cart_button">+</a>
+                </div>
+                
+                <div class="cart_item">
+                    Price:{{ this.price }} $
+                </div>
+                <div class="cart_item">
+                    <a href="/remove/{{this.item.id}}" class="cart_button"></i> Remove</a>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <strong>Total: {{ totalPrice }} $</strong>
+    </div>
+    <hr>
+    <div>
+        <a href="#" type="button">Checkout</a>
+    </div>
+{{ else }}
+    Your shopping cart is empty.
+{{/if}}

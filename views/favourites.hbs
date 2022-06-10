@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+{{# if products }}
+    <div class="favourite page">
+        <ul>
+            {{# each products }}
+            <li class="cart_item_list">
+                <div class="cart_item">
+                    <strong>{{ this.item.title }}<img src={{this.item.source}} alt="piooop" width="100px", height="100px" /></strong><br/>
+                    <em>Description:{{{this.item.description}}}</em>
+                </div>
+                 <div class="cart_item">Price: {{ this.item.price }} $</div>
+                <div class="cart_item">
+                    <a href="/remove/{{this.item.id}}/{{this.item.favourite}}"></i> Remove</a>
+                </div>
+                <a href="/addFromFavourite/{{ this.item.id }}" role="button"><i aria-hidden="true"></i> Add to cart</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+{{ else }}
+    Your favorites list is empty.
+{{/if}}
